@@ -291,3 +291,122 @@ Keyup	ໝາຍເຖິງເຫດການທີ່ຈະເກີດຂື�
 	    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
 	    <button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button>
 ```
+## 2, ຈົ່ງນຳເອົາຮູບພາບມາສະແດງຜົນໃນໜ້າເວັບຫຼັງຈາກນັ້ນໄຫ້ຂຽນ jQuery ດັ່ງນີ້
+	+ ເຮົາມີຂໍ້ມຸນດັ່ງນີ້:
+  ```html
+	<img src='……..' whdth='300' height='300'></img>
+	    <button type="button" class="slideup">ເລື່ອນຂື້ນ</button>
+	    <button type="button" class="slidedown">ເລື່ອນລົງ</button>
+	    <button type="button" class="slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
+	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນຂື້ນ ໄຫ້ຮູບນັ້ນເລື່ອນຂື້ນ
+	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນລົງ ໄຫ້ຮູບນັ້ນເລື່ອນລົງ
+	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນຂື້ນ ແລະ ລົງ ໄຫ້ຮູບນັ້ນເລື່ອນຂື້ນ ແລະ ເມື່ອກົດປຸ່ມອີກຄັ້ງ ໃຫ້ຮູບພາບນັ່ນເລື່ອນລົງ
+```
+## 3, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+```html
+	<p>ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
+	    <button class="btn1">fadein</button>
+	    <button class="btn2">fadeOut</button>
+	ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
+	- ເມື່ອເຮົາກົດໃສ່ປຸ່ມ fadeIn ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆສະແດງຜົນ
+	- ເມື່ອເຮົາກົດໃສ່ປຸ່ມ fadeOut ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆຫາຍໄປ
+ ```
+## 4, ເຮົາມີຂໍ້ມຸນດັ່ງນີ້:
+```html
+	<h1>ການນຳໃຊ້ mouse Events </h1>
+	ຈົ່ງຂຽນ jQuery ເມື່ອເອົາເມົ້າ ໄປຊີ້ໃສ່ ໃຫ້ມີສິພື້ນຫຼັງສິແດງ, ມີຂະໜາດໃຫຍ່ຂື້ນ, ເມື່ອນຳເອົາເມົ້າອອກໃຫ້ສີພື້ນຫຼັງເປັນສີເຫຼືອງ, ມີຂະຫນາດນ້ອຍລົງ
+```
+## 5, ຈົ່ງຂຽນ jQuery ເມື່ອກົດປຸ່ມ keybroad ໃຫ້ຂະໜາດຕົວໜັງສື  ເປັນ 30 px ບ໊ອກເປັນສີເທົາ ເມື່ອເຮົາວ່າປຸ່ມ keybroad ໃຫ້ຂະໜາດຕົວອັກສອນເປັນ 12 px
+```html
+	ປ້ອນຂໍ້ມູນ <input type='text' class='a' name='text'>
+```
+# ບົດທີ 3 ການນຳໃຊ້ jQuery ເພື່ອຮັບຂໍ້ມູນຈາກຟອມ
+## 1, ການຮັບຂໍ້ມູນດວ້ຍ jQuery 
+	ເຮົາຈະຂຽນ jQuery ເພື່ອຮັບຂໍ້ມູນຈາກແບບຟອມ ຫຼັງຈາກນັ້ນຈັ່ງຄ່ອຍດືງຂໍ້ມູນທີ່ຮັບມາ ໄປວາງອີກຟາຍໜື່ງ ເພື່ອເຮັດວຽກຕາມຈຸດປະສົງທີ່ເຮົາຕ້ອງການ
+```java
+	 # ຮູບແບບການຮັບຂໍ້ມູນ
+	$(function(){
+$(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
+	Var ຊື່ຕົວປ່ຽນ 1 =  $("ຮັບ id ຫຼື class ບ໊ອກ1").val();
+	Var ຊື່ຕົວປ່ຽນ 2 =  $("ຮັບ id ຫຼື class ບ໊ອກ2").val();
+	$.GET ຫຼື POST ('ຊື່ຟາຍ ແລະ ນາມສະກຸນ',{
+	ວາງຄ່າຕົວປ່ຽນໃໝ່1:ຕົວປ່ຽນ1,
+	ວາງຄ່າຕົວປ່ຽນໃໝ່2:ຕົວປ່ຽນ2
+	},
+	Function(Output){
+	$("ບ່ອນສະແດງຂໍ້ມູນ ເລືອກ ID or class ").html(Output);
+});
+});
+});
+```
+## ຕົວຢ່າງ:
+	1, ຈົ່ງສ້າງຟອມບັນທຶກຂໍ້ມູນດັ່ງນີ້: (ນຳໃຊ້ bootstarp)
+	ຊື່
+	ນາມສະກຸນ
+	ເພດ
+	ປຸ່ມສົ່ງຂໍ້ມູນ, ປຸ່ມລ້າງຂໍ້ມູນ
+	ຫຼັງຈາກນັ້ນຂຽນ jQuery ເພື່ອຮັບຂໍ້ມູນຈາກຟອມ ແລ້ວສົ່ງຂໍ້ມູນໄປຫາຟາຍ ຊື່ວ່າ get.php
+```html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+	    <title>Document</title>
+	</head>
+	<body>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-md-5">
+	                <div class="">
+	                    <div class="card">
+	                        <div class="card-header text-white bg-success">
+	                            <h2 align="center">ຟອມບັນທຶກຂໍ້ມູນ</h2>
+	                        </div>
+	                        <div class="card-body">
+	                            <form action="get.php" class="vertical" method="GET">
+	                                <div class="form-group">
+	                                    <label for="">ຊື່</label>
+	                                    <input type="text" id="fname" placeholder="ປ້ອນຊື່" class="form-control">
+	                                </div>
+	                                <div class="form-group">
+	                                    <label for="">ນາມສະກຸນ</label>
+	                                    <input type="text" id="lname" class="form-control" placeholder="ປ້ອນນາມສະກຸນ">
+	                                </div>
+	                                <div class="form-group">
+	                                    <label for="">ເລືອກເພດ</label>
+	                                    <div class="radio-inline">
+	                                        <input type="radio" name="gender" value=" ເພດຍິງ"> ຍິງ
+	                                        <input type="radio" name="gender" value=" ເພດຊາຍ"> ຊາຍ
+	                                    </div>
+	                                </div>
+	                                <div class="form-group">
+	                                    <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
+	                                    <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
+	                                </div>
+	                            </form>
+	                        </div>
+	                        <div class="card-footer">
+	                            <div id="show"></div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-4"></div>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+	</html>
+```
+	==>file get.php<==
+```java
+	<?php
+	$fname = $_GET['fname'];
+	$lname = $_GET['lname'];
+	$gender = $_GET['gender'];
+	echo "ຊື່$fname <br>";
+	echo "ນາມສະກຸນ: $lname <br>";
+	echo "ເພດ: $gender <br>";
+	?>
+```
