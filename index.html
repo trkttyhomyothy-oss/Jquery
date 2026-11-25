@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>jQuery</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
     <script src="jQuery.js"></script>
-
-</head>
-<style>
-    *{
-        background:  #607D68;
-        color: rgb(255, 255, 255);
-        font-family: 'Noto Sans Lao Looped';
+  </head>
+  <style>
+    * {
+      background: #607d68;
+      color: rgb(255, 255, 255);
+      font-family: "Noto Sans Lao Looped";
     }
-   
-</style>
-<body>
-   <!--	ຈົ່ງຂຽນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ tag  H1 ເຮັດແນວໃດ?-->
-	<!-- <h1> MySQL </h1>
+  </style>
+  <body>
+    <!--	ຈົ່ງຂຽນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ tag  H1 ເຮັດແນວໃດ?-->
+    <!-- <h1> MySQL </h1>
 	<h2> PHP </h2>
 	<h3> jQuery </h3> -->
 
-	<!-- ຈົ່ງຂຽນ jquery ເມື່ອກົດໃສ່ປຸ່ມ click here ແລ້ວໄຫ້ຂໍ້ມູນຢູ່ tag ຫາຍໄປ
+    <!-- ຈົ່ງຂຽນ jquery ເມື່ອກົດໃສ່ປຸ່ມ click here ແລ້ວໄຫ້ຂໍ້ມູນຢູ່ tag ຫາຍໄປ
     <h1> test </h1>
 	<button>click here</button> -->
 
@@ -32,14 +30,13 @@
 	<p> paragrap 2 </p>
 	<p> paragrap 3 </p>
 	<button> hide </button>  -->
-	
-	<!-- ຈົ່ງຂຽນນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນ ໃນ h3 ແລ້ວເມື່ອຄຣີກໃສ່ຄຳວ່າສີແດງໃຫ້ຂື້ນວ່າ ເຈົ້າເລືອກສີແດງ
+
+    <!-- ຈົ່ງຂຽນນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນ ໃນ h3 ແລ້ວເມື່ອຄຣີກໃສ່ຄຳວ່າສີແດງໃຫ້ຂື້ນວ່າ ເຈົ້າເລືອກສີແດງ
 	ຖ້າຄຣິກໃສ່ສິຟ້າໃຫ້ສະແດງຄຳວ່າ ເຈົ້າເລືອກສີຟ້າ
     <h3 class='a'> ເຈົ້າເລືອກສີແດງ </h3>
 	<h3 class='b'> ເຈົ້າເລືອກສີຟ້າ </h3>
 	<button class='red'> ສີແດງ </button>
 	<button class='blue'> ສີຟ້າ </button> -->
-
 
     <!-- ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
 	ຖ້າຫາກວ່າຄຣິກໃສ່ປຸ່ມ ສີແດງ ແລ້ວໄຫ້ສະແດງຄຳວ່າ ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສີແດງ
@@ -49,34 +46,33 @@
 	<button type='button' class='btn_red'> ສີແດງ </button>
 	<button type='button' class='btn_blue'> ສີຟ້າ </button>
 	<button type='button' class='btn_yellow'> ສີເຫຼືອງ </button> -->
-	
-	<!-- <p class="a">ຄຣິກຄັ້ງດຽວ</p>
+
+    <!-- <p class="a">ຄຣິກຄັ້ງດຽວ</p>
 	<p class="b">ຄຣິກສອງຄັ້ງ</p>
 	<button type="button" class="btn_a">click</button>
 	<button type="button" class="btn_b">dblclick</button> -->
 
-	<!--<h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+    <!--<h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
 	<h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
 	<button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
 	<button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button> -->
 
-	<!--ບົດເຝິກຫັດ ຂໍ້2
+    <!--ບົດເຝິກຫັດ ຂໍ້2
 	<img src='image/WhatsApp Image 2026-11-22 at 20.53.11.jpeg' whdth='300' height='300'></img>
 	<button type="button" id="slideup">ເລື່ອນຂື້ນ</button>
 	<button type="button" id="slidedown">ເລື່ອນລົງ</button>
 	<button type="button" id="slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button> -->
 
-	<!-- <p>ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
+    <!-- <p>ການນຳໃຊ້ fadeIn ແລະ fadeOut </p>
 	<button class="btn1">fadein</button>
 	<button class="btn2">fadeOut</button> -->
-	
-	<!-- ບົດເຝິກຫັດ ຂໍ້4
+
+    <!-- ບົດເຝິກຫັດ ຂໍ້4
 	<h1>ການນຳໃຊ້ mouse Events </h1> -->
 
-	<!-- ບົດເຝິກຫັດ ຂໍ້5
+    <!-- ບົດເຝິກຫັດ ຂໍ້5
 	ປ້ອນຂໍ້ມູນ <input type="text" class="a" name="text"> -->
 
-	ຕົວຢ່າງ 1 ບົດທີ 3 
-	srcipt
-</body>
+    ຕົວຢ່າງ 1 ບົດທີ 3 srcipt
+  </body>
 </html>
