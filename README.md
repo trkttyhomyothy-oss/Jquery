@@ -10,3 +10,35 @@
 	Select folder vs code ==> ສ້າງhtml ==>
 	<script src="https://code.jquery.com/jquery-4.1.0.js"></script> // ແບບອອນລາຍ
 	<script src="jquery.js"></script> // ແບບບໍ່ໃຊ້ອິນເຕີເນັດ
+
+# ໂຄງສ້າງຂອງ ພາສາ jQuery 
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <title>jQuery</title>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
+	<script>
+	---------------
+	</script>
+	</head>
+	<body>
+	    ----------------------------
+	</body>
+	</html>
+# 3, ຮູບແບບຂອງການຂຽນ jQuery 
+	ແມ່ນມີ2 ຮູບແບບ:
+	# ຮູບແບບທີ 1
+		<script>
+		$(document),ready(function){
+		// ຂຽນ script ລະຫວ່າງນີ້
+		});
+		</script>
+	# ຮູບແບບທີ 2
+	<script>
+	$(function(){
+	// ຂຽນ script ລະຫວ່າງນີ້
+	}
+	</script>

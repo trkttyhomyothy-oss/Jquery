@@ -24,6 +24,13 @@
                 }
             );
             });
+            $('#reset').click(function (e) { 
+                e.preventDefault();
+                $("#fname").val("");
+                $("#lname").val("");
+                $("input[id='gender']:checked").val();
+                $("#show").html("");
+            });
         });
     </script>
     <style>
