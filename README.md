@@ -56,7 +56,7 @@
 	       });
 	    </script>
 ```
-5, ຮູບແບບຄຳສັ່ງພື້ນຖານຂອງ ພາສາ jquery 
+# 5, ຮູບແບບຄຳສັ່ງພື້ນຖານຂອງ ພາສາ jquery 
 	jQuery ອອກແບບມາໃຫ້ເລືອກເອົາ HTML element ໝາຍເຖິງ tag ຂອງ html ແລະ ກຳນົດ action ໃຫ້ກັບຕົວເຮົາເລືອກນັ້ນ ເຊີ່ງມີຮູບແບບດັ່ງນີ້:
 	$("select"),action()
 	$ ເປັນເຄື່ອງໝາຍເຂົ້າເຖິງ jquery 
@@ -91,4 +91,41 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 	<h1> MySQL </h1>
 	<h2> PHP </h2>
 	<h3> jQuery </h3>
+```
+## 2, ເຮົາມີຂໍ້ມູນຄື:
+```html
+	<h1> test </h1>
+	<button>click here</button>
+	- ຈົ່ງຂຽນ jquery ເມື່ອກົດໃສ່ປຸ່ມ ແລ້ວໄຫ້ຂໍ້ມູນຢູ່ tag h1 ຫາຍໄປ
+	==>jQuery<==
+	$(document).ready(function(){
+		$('button').click(function(){
+			$('h1').hide();
+		});
+	});
+	==>Html<==
+	<h1> test </h1>
+	<button>click here</button>
+```
+
+## 3, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+```html
+	<h1> test </h1>
+	<p> paragraph 1 </p>
+	<p> paragraph 2 </p>
+	<p> paragraph 3 </p>
+	<button> hide </button>
+	ຈົ່ງຂຽນ jquery ເມື່ອກົດປຸ່ມ ແລ້ວວ ໄຫ້ຂໍ້ມູນ tag p ຫາຍໄປ
+	==>jQuery<==
+	$(function(){
+		$('button').click(function(){
+			$('p').hide();
+		});
+	});
+	==>Html<==
+	<h1> test </h1>
+	<p> paragraph 1 </p>
+	<p> paragraph 2 </p>
+	<p> paragraph 3 </p>
+	<button> hide </button>
 ```
