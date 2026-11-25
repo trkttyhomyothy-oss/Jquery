@@ -5,9 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
     <title>Document</title>
+    <script >
+        $(document).ready(function () {
+            $('#send').click(function (e) { 
+                e.preventDefault();
+                var a = $("#fname").val();
+                var b = $("#lname").val();
+                var c = $("input[id='gender']:checked").val();
+                $.post("get.php",{
+                    fname:a,
+                    lname:b,
+                    gender:c
+                },
+                function(output){
+                    $("#show").html(output);
+                }
+            );
+            });
+        });
+    </script>
+    <style>
+        *{
+            font-family: 'noto sand lao looped';
+            justify-content: center
+        }
+    </style>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row">
