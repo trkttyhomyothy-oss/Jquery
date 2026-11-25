@@ -63,7 +63,7 @@
 	Selector ຄືສວ່ນທີເລືອກ 
 Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ.
 	=======> 
-    ```java
+```java
 	- ການເລືອກ tag element 
 	$("p")	ເລືອກແທັກທັງໝົດ
 	- ການເລືອກ class
@@ -78,7 +78,7 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 ```
 	ຕົວຢ່າງ: 
 	1, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
-    ```html
+```html
 	<H1> MySQL </H1>
 	<H2> MySQL </H2>
 	<H3> MySQL </H3>
