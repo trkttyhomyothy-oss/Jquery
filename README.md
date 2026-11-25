@@ -136,7 +136,7 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 		<h3 class='b'> ເຈົ້າເລືອກສີຟ້າ </h3>
 		<button class='red'> ສີແດງ </button>
 		<button class='blue'> ສີຟ້າ </button>
-		**ຈົ່ງຂຽນນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນ ໃນ h3 ແລ້ວເມື່ອຄຣີກໃສ່ຄຳວ່າສີແດງໃຫ້ຂື້ນວ່າ ເຈົ້າເລືອກສີແດງຖ້າຄຣິກໃສ່ສິຟ້າໃຫ້ສະແດງຄຳວ່າ ເຈົ້າເລືອກສີຟ້າ**
+**ຈົ່ງຂຽນນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນ ໃນ h3 ແລ້ວເມື່ອຄຣີກໃສ່ຄຳວ່າສີແດງໃຫ້ຂື້ນວ່າ ເຈົ້າເລືອກສີແດງຖ້າຄຣິກໃສ່ສິຟ້າໃຫ້ສະແດງຄຳວ່າ ເຈົ້າເລືອກສີຟ້າ**
 		==>jQuery<==
 		$(function(){
 		    $('h3').hide();
@@ -156,4 +156,138 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 		<h3 class='b'> ເຈົ້າເລືອກສີຟ້າ </h3>
 		<button class='red'> ສີແດງ </button>
 		<button class='blue'> ສີຟ້າ </button>
+```
+## 5, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+```html
+		<h1> ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ </h1>
+		<button class='button' class='btn_red'> ສີແດງ </button>
+		<button class='button' class='btn_blue'> ສີຟ້າ </button>
+		<button class='button' class='btn_yellow'> ສີເຫຼືອງ </button>
+		ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
+		- ຖ້າຫາກວ່າຄຣິກໃສ່ປຸ່ມ ສີແດງ ແລ້ວໄຫ້ສະແດງຄຳວ່າ ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສີແດງ
+		- ຖ້າຫາກວ່າຄຣິກໃສ່ປຸ່ມ ສີຟ້າ ແລ້ວໄຫ້ສະແດງຄຳວ່າ ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສີຟ້າ
+		- ຖ້າຫາກວ່າຄຣິກໃສ່ປຸ່ມ ສີເຫຼືອງ ແລ້ວໄຫ້ສະແດງຄຳວ່າ ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ ໃຫ້ເປັນສີເຫຼືອງ
+		==>jQuery<==
+		$(function () { 
+		    $('.btn_red').click(function(){
+		        $('h1').css('color','red');
+		    });
+		    $('.btn_blue').click(function(){
+		        $('h1').css('color','blue');
+		    });
+		    $('.btn_yellow').click(function(){
+		        $('h1').css('color','yellow');
+		    });
+		 });
+		==>Html<==
+		<h1> ມື້ນີ້ຝົນຕົກຂ້ອຍຈະນອນ </h1>
+		<button class='button' class='btn_red'> ສີແດງ </button>
+		<button class='button' class='btn_blue'> ສີຟ້າ </button>
+		<button class='button' class='btn_yellow'> ສີເຫຼືອງ </button>
+```
+
+# ບົດທີ 2 ການຳໃຊ້ Events
+## 1, jQuery Events ແມ່ນຫຍັງ?
+## + mouse events
+	Click 	ເຫດການທີ່ຈະເກີດຂຶ້ນ ເມືອມີການຄຣິກ Element ທີ່ເລືອກ
+	dblclick 	ເຫດການທີ່ຈະເກີດຂຶ້ນ ເມືອມີການດັບເບີ້ນຄຣິກ Element ທີ່ເລືອກ
+	Mouseenter 	ເຫດການທີ່ຈະເກີດຂຶ້ນ ເມືອມີການເອົາເມົ້າໄປຊີ້ໃສ່ Element ທີ່ເລືອກ
+	Mousehover 	ເຫດການທີ່ຈະເກີດຂຶ້ນ ເມືອມີການເລື່ອນເມົ້າໄປຢູ່ Element ທີ່ເລືອກ
+	Mouseover 	ເຫດການທີ່ຈະເກີດຂຶ້ນ ເມືອມີການເລື່ອນເມົ້າໄປຢູ່ Element ທີ່ເລືອກ
+## + action affects events 
+	Hide 	ເຊື່ອງ
+	Show 	ສະແດງ
+	Toggle 	ເຊື່ອງ ແລະ ສະແດງ
+	SildeUp 	ເລື່ອນຂື້ນ
+	Sildedown 	ເລື່ອນລົງ
+	Sildetoggle 	ເລື່ອນຂື້ນແລະເລື່ອນລົງ
+	fedeln 	ຄ່ອຍໆສະແດງອອກມາ
+	fedeOut 	ຄ່ອຍໆຫາຍໄປ
+	fadeTo 	ຄ່ອຍໆຫາຍ ແລະ ຄ່ອຍໆກັບມາ
+	fadetoggle 	ຄ່ອຍໆສະແດງ ແລະ ຄ່ອຍໆຫາຍໄປ
+## +Keyboard Events 
+Keypress	ໝາຍເຖິງເຫດການທີ່ເກີດຂື້ນເມື່ອມີການກົດປຸ່ມໃນ keyboard ຍົກເວັ້ນປຸ່ມທີ່ເປັນ key ຕ່າງໆຂອງ keyboard ເຊັ່ນ: alt, ctrlc, shift
+Keydown	ໝາຍເຖິງເຫດການທີ່ຈະເກີດຂື້ນເມືອມີວການກົດປຸ່ມໃນ keyboard
+Keyup	ໝາຍເຖິງເຫດການທີ່ຈະເກີດຂື້ນເມື່ອມີການປ່ອຍປຸ່ມກົດໃນ keyboard
+## +ວິທີການນຳໃຊ້ events 
+```java
+	- ຮູບແບບການນຳໃຊ້ events 
+	$(function(){
+		$('selector').ຊື່ events ທີ່ຕ້ອງການ(function(){
+			//ເຫດການທີ່ຈະເກີດຂື້ນ
+		});
+	});
+```
+# ຕົວຢ່າງ:
+## 1, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+```html
+	    <p class="a">ຄຣິກຄັ້ງດຽວ</p>
+	    <p class="a">ຄຣິກສອງຄັ້ງ</p>
+	    <button type="button" class="btn_a">click</button>
+	    <button type="button" class="btn_b">dblclick</button>
+	ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
+	- ເມື່ອກົດປຸ່ມ click ແລ້ວໄຫ້ຄຳວ່າ ຄຣິກຄັ້ງດຽວຫາຍໄປ ແລະ ຄຣິກຄັ້ງທີ່ສອງໄຫ້ກັບມາ
+	- ເມື່ອກົດປຸ່ມ dblclick ແລ້ວໄຫ້ຄຳວ່າ ຄຣິກສອງຄັ້ງຫາຍໄປ ແລະ ເມື່ອເຮົາ ດັບເບີ້ນຄຮິກອີກຄັ້ງໄຫ້ກັບມາ
+	- ==>jQuery==
+	$(function(){
+	$('.btn_a').click(function(){
+	    $('.a').toggle();
+	});
+	$('.btn_b').dblclick(function(){
+	    $('.b').toggle();
+	});
+	});
+	==>Html<==
+	<p class="a">ຄຣິກຄັ້ງດຽວ</p>
+	    <p class="b">ຄຣິກສອງຄັ້ງ</p>
+	    <button type="button" class="btn_a">click</button>
+	    <button type="button" class="btn_b">dblclick</button>
+```
+# ບົດເຝິກຫັດ
+## 1, ເຮົາມີຂໍ້ມູນດັ່ງນີ້
+```html
+	    <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+	    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+	    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
+	    <button type="button" class="btnຟ">ຄຣິກສອງຄັ້ງ</button>
+	ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
+	- ເມືອເຮົາກົດປຸ່ມ ຄຣິກຄັ້ງດຽວ ໃຫ້ຄຳວ່າ ຄຣິກຄັ້ງດຽວ ນັັ້ນຄ່ອຍໆຫາຍໄປ ແລະ ຄຳວ່າ ຄ່ອຍໆສະແດງອອກມາ ນັ້ນສະແດງຂື້ນມາ ແລະ ເມື່ອມີການກົດໃສ່ປຸ່ມ ຄຣິກຄັ້ງດຽວ ອີກຄັ້ງແລ້ວໃຫ້ສະແດງຄຳວ່າ ຄ່ອຍໆສະແດງອອກມານັ້ນຫາຍໄປ
+	- ເມື່ອເຮົາກົດດັບເບີ້ນຄຣິກໃສ່ຄຳວ່າ: ຄຮິກສອງຄັ້ງ ໃຫ້ຄຳເວົ້າທັງ 2 ແທັດນັ້ນກັບມາສະແດງທັງໝົດ
+	- ເມື່ອເອົາເມົ້າຊີ້ໃສ່ປຸ່ມຄຣິກຄັັ້ງດຽວ ແລ້ວໃຫ້ປຸ່ມ ຄຣິກຄັ້ງດຽວ ໄຫ້ມີສີ້ພື້ນຫຼັງເປັນສີຂຽວ, ມີຂະໜາກດໃຫຍ່ຂື້ນ, ປຸ່ມ ຄຣິກສອງຄັ້ງ ນັ້ນຄ່ອຍໆຫາຍໄປ,ເມື່ອເອົາເມົ້າອອກແລ້ວໃຫ້ປຸ່ມຄຣິກຄັ້ງດຽວກັບເປັນປົກກະຕິ ແລະ ມີຂະໜາດປົກກະຕິ , ປຸ່ມຄຣິກສອງຄັ້ງ ຄ່ອຍໆກັບມາສະແດງ ແລະ ເມື່ອເອົາເມົ້າໄປຊີ້ໃສ່ ປຸ່ມຄິກສອງຄັັ້ງ ແລ້ວໃຫ້ປຸ່ມຄຣີກສອງຄັ້ງ ມີສິພື້ນຫຼັງເປັນສີຟ້າ,ມີຂະໜາດທີ່ໃຫຍ່ຂື້ນ, ປຸ່ມຄຣິກຄັ້ງດຽວຄ່ອຍໆຫາຍໄປ ,ເມື່ອເອົາເມົ້າອອກໄຫ້ເປັນປົກກະຕິ
+	==>jQuery<==
+	$(function(){
+	    $('.b1').hide();
+	      $('.btn1').click(function(){
+	        if($('.b1').is(':hidden')){
+	          $('.a1').fadeOut();
+	          $('.b1').fadeIn();
+	        }else $('.b1').fadeOut();
+	});
+	$('.btn2').dblclick(function(){
+	  $('.a1,.b1').fadeIn();
+	});
+	  $('.btn1').hover(
+	  function(){
+	  $(this).css({"background-color": "green", "font-size": "24px"});
+	  $('.btn2').fadeTo("slow",1)
+	  },
+	  function(){
+	    $(this).css({"background-color": "", "font-size": ""});
+	    $('.btn2').fadeTo("slow",1);}
+	  );
+	  $('.btn2').hover(
+	  function(){
+	    $(this).css({"background-color": "blue", "font-size": "24px"});
+	    $('.btn1').fadeTo('slow',0);
+	  },
+	  function(){$(this).css({"background-color": "", "font-size": ""});
+	  $('.btn1').fadeTo("slow",1)
+	  }
+	);
+	});
+	==>Html<==
+	    <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+	    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+	    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
+	    <button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button>
 ```
