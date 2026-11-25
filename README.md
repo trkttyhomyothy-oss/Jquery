@@ -8,11 +8,12 @@
 	ເຮົາຈະນຳເອົາຟາຍ jquery.js ເກັບໄວ້ໃນ folder ທີ່ເຮົາຕ້ອງການໃຊ້
 	ດາວໂຫຼດ / ອອນລາຍ ຂອງ jQuery ==> this pc ==> xampp ==> htdocs ==> new folder ==> 
 	Select folder vs code ==> ສ້າງhtml ==>
+```java
 	<script src="https://code.jquery.com/jquery-4.1.0.js"></script> // ແບບອອນລາຍ
 	<script src="jquery.js"></script> // ແບບບໍ່ໃຊ້ອິນເຕີເນັດ
-
-# ໂຄງສ້າງຂອງ ພາສາ jQuery 
-	
+```
+## ໂຄງສ້າງຂອງ ພາສາ jQuery 
+```html
 	<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -28,9 +29,11 @@
 	    ----------------------------
 	</body>
 	</html>
+```
 # 3, ຮູບແບບຂອງການຂຽນ jQuery 
 	ແມ່ນມີ2 ຮູບແບບ:
-	# ຮູບແບບທີ 1
+## ຮູບແບບທີ 1
+```java
 		<script>
 		$(document),ready(function){
 		// ຂຽນ script ລະຫວ່າງນີ້
@@ -42,3 +45,48 @@
 	// ຂຽນ script ລະຫວ່າງນີ້
 	}
 	</script>
+```
+## 4, ຈົ່ງຂຽນ jQuery ເພື່ອສະແດງຄຳວ່າ Hello word !!!!! ?
+```java
+	<script>
+	       $(document).ready(function () {
+	        document.Write("Hello word!!!!!!!!!!");
+	       });
+	    </script>
+```
+5, ຮູບແບບຄຳສັ່ງພື້ນຖານຂອງ ພາສາ jquery 
+	jQuery ອອກແບບມາໃຫ້ເລືອກເອົາ HTML element ໝາຍເຖິງ tag ຂອງ html ແລະ ກຳນົດ action ໃຫ້ກັບຕົວເຮົາເລືອກນັ້ນ ເຊີ່ງມີຮູບແບບດັ່ງນີ້:
+	$("select"),action()
+	$ ເປັນເຄື່ອງໝາຍເຂົ້າເຖິງ jquery 
+	Selector ຄືສວ່ນທີເລືອກ 
+Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ.
+	=======> 
+    ```java
+	- ການເລືອກ tag element 
+	$("p")	ເລືອກແທັກທັງໝົດ
+	- ການເລືອກ class
+	$(".test") 	ເລືອກແທັກທັງໝົດທີ່ເປັນ class
+	- ການເລືອກ ID 
+	$("#test") 	ເລືອກແທັກທັງໝົດທີ່ເປັນ ID ຊື່ວ່າ test 
+	- ການເລືອກໃນຮູບແບບຕ່າງໆ
+	$("*") 	ໝາຍເຖິງການເລືອກທັງໝົດຂອງ element 
+	$("this") 	ໝາຍເຖິງການເລືອກຂໍ້ມູນໃນ tag ນັ້ນໆ 
+	$("p.test") 	ໝາຍເຖິງການລະບຸ ຊື່ແທັກ ພ້ອມຊື່ class
+	$("#new1,#new2") 	ໝາຍເຖິງເລືອກ ID ເພື່ອໃຫ້ເຮັດວຽກພ້ອມກັນທັງ 2 ໂຕຂື້ນໄປ.
+```
+	ຕົວຢ່າງ: 
+	1, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+    ```html
+	<H1> MySQL </H1>
+	<H2> MySQL </H2>
+	<H3> MySQL </H3>
+	ຈົ່ງຂຽນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ tag  H1 ເຮັດແນວໃດ?
+	==>jQuery<==
+	$(document).ready(function () {
+	        $("h1").hide();
+	    });
+	==>Html<==
+	<h1> MySQL </h1>
+	<h2> PHP </h2>
+	<h3> jQuery </h3>
+```
