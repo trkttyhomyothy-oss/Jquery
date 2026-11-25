@@ -9,12 +9,12 @@
     <title>Document</title>
     <script >
         $(document).ready(function () {
-            $('#send').click(function (e) { 
+            $('#sand').click(function (e) { 
                 e.preventDefault();
                 var a = $("#fname").val();
                 var b = $("#lname").val();
                 var c = $("input[id='gender']:checked").val();
-                $.post("get.php",{
+                $.get("get.php",{
                     fname:a,
                     lname:b,
                     gender:c
@@ -45,18 +45,18 @@
                         <div class="card-body">
                             <form action="get.php" class="vertical" method="GET">
                                 <div class="form-group">
-                                    <label for="">ຊື່</label>
-                                    <input type="text" id="fname" placeholder="ປ້ອນຊື່" class="form-control">
+                                    <label for="fname">ຊື່</label>
+                                    <input type="text" name="fname" id="fname" placeholder="ປ້ອນຊື່" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="">ນາມສະກຸນ</label>
-                                    <input type="text" id="lname" class="form-control" placeholder="ປ້ອນນາມສະກຸນ">
+                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="ປ້ອນນາມສະກຸນ">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">ເລືອກເພດ</label>
+                                    <label for="gender">ເລືອກເພດ</label>
                                     <div class="radio-inline">
-                                        <input type="radio" name="gender" value=" ເພດຍິງ"> ຍິງ
-                                        <input type="radio" name="gender" value=" ເພດຊາຍ"> ຊາຍ
+                                        <input type="radio" id="gender"  name="gender" value=" ເພດຍິງ"> ຍິງ
+                                        <input type="radio" id="gender" name="gender" value=" ເພດຊາຍ"> ຊາຍ
                                     </div>
                                 </div>
                                 <div class="form-group">
