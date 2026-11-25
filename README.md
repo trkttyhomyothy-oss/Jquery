@@ -1,13 +1,13 @@
 # ບົດທີ 1 ຄວາມຮູ້ພື້ນຖານກ່ຽວກັບພາສາ jquery 
 # 1, Jquery ແມ່ນຫຍັງ?
-	jQuery ແມ່ນ java script library ເຊິ່ງ jQuery ໄດ້ລວມເອົາ Object ແລະ  Function ຕ່າງໆ ທີ່ຈຳເປັນມາເກັບໄວ້ໃນຮູບແບບ library ແລະ ຖືກອອກແບບມາເພື່ອເຮັດໃຫ້ການຮຽນ JavaScript ນັ້ນມີຄວາມສະດວກສະບາຍງ່າຍຍຂື້ນ
-	- ຈຸດປະສົງຫຼັກຂອງການຮຽນ jQuery ແມ່ນເຮົາຈະນຳໃຊ້ໃນການຮັບຂໍ້ມູນຈາກຟອມແລ້ວສົ່ງໄປຫາ PHP ເພື່ອບັນທຶກຂໍ້ມູນຈາກຟອມ
+	**jQuery ແມ່ນ java script library ເຊິ່ງ jQuery ໄດ້ລວມເອົາ Object ແລະ  Function ຕ່າງໆ ທີ່ຈຳເປັນມາເກັບໄວ້ໃນຮູບແບບ library ແລະ ຖືກອອກແບບມາເພື່ອເຮັດໃຫ້ການຮຽນ JavaScript ນັ້ນມີຄວາມສະດວກສະບາຍງ່າຍຍຂື້ນ
+	- ຈຸດປະສົງຫຼັກຂອງການຮຽນ jQuery ແມ່ນເຮົາຈະນຳໃຊ້ໃນການຮັບຂໍ້ມູນຈາກຟອມແລ້ວສົ່ງໄປຫາ PHP ເພື່ອບັນທຶກຂໍ້ມູນຈາກຟອມ**
 # 2, ການດາວໂຫຼດ ແລະ ຕິດຕັ້ງ jQuery 
-	ສາມາດໂຫຼດໄດ້ຈາກ www.jqurey.com
+	**ສາມາດໂຫຼດໄດ້ຈາກ www.jqurey.com
 	+ ວິທີການຕິດຕັ້ງ jquery 
 	ເຮົາຈະນຳເອົາຟາຍ jquery.js ເກັບໄວ້ໃນ folder ທີ່ເຮົາຕ້ອງການໃຊ້
 	ດາວໂຫຼດ / ອອນລາຍ ຂອງ jQuery ==> this pc ==> xampp ==> htdocs ==> new folder ==> 
-	Select folder vs code ==> ສ້າງhtml ==>
+	Select folder vs code ==> ສ້າງhtml ==>**
 ```java
 	<script src="https://code.jquery.com/jquery-4.1.0.js"></script> // ແບບອອນລາຍ
 	<script src="jquery.js"></script> // ແບບບໍ່ໃຊ້ອິນເຕີເນັດ
@@ -31,7 +31,7 @@
 	</html>
 ```
 # 3, ຮູບແບບຂອງການຂຽນ jQuery 
-	ແມ່ນມີ2 ຮູບແບບ:
+	**ແມ່ນມີ2 ຮູບແບບ:**
 ## ຮູບແບບທີ 1
 ```java
 		<script>
@@ -57,20 +57,20 @@
 	    </script>
 ```
 # 5, ຮູບແບບຄຳສັ່ງພື້ນຖານຂອງ ພາສາ jquery 
-	jQuery ອອກແບບມາໃຫ້ເລືອກເອົາ HTML element ໝາຍເຖິງ tag ຂອງ html ແລະ ກຳນົດ action ໃຫ້ກັບຕົວເຮົາເລືອກນັ້ນ ເຊີ່ງມີຮູບແບບດັ່ງນີ້:
+	**jQuery ອອກແບບມາໃຫ້ເລືອກເອົາ HTML element ໝາຍເຖິງ tag ຂອງ html ແລະ ກຳນົດ action ໃຫ້ກັບຕົວເຮົາເລືອກນັ້ນ ເຊີ່ງມີຮູບແບບດັ່ງນີ້:**
 	$("select"),action()
 	$ ເປັນເຄື່ອງໝາຍເຂົ້າເຖິງ jquery 
 	Selector ຄືສວ່ນທີເລືອກ 
 Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ.
 	=======> 
 ```java
-	- ການເລືອກ tag element 
+	**- ການເລືອກ tag element **
 	$("p")	ເລືອກແທັກທັງໝົດ
-	- ການເລືອກ class
+	**- ການເລືອກ class**
 	$(".test") 	ເລືອກແທັກທັງໝົດທີ່ເປັນ class
-	- ການເລືອກ ID 
+	**- ການເລືອກ ID** 
 	$("#test") 	ເລືອກແທັກທັງໝົດທີ່ເປັນ ID ຊື່ວ່າ test 
-	- ການເລືອກໃນຮູບແບບຕ່າງໆ
+	**- ການເລືອກໃນຮູບແບບຕ່າງໆ**
 	$("*") 	ໝາຍເຖິງການເລືອກທັງໝົດຂອງ element 
 	$("this") 	ໝາຍເຖິງການເລືອກຂໍ້ມູນໃນ tag ນັ້ນໆ 
 	$("p.test") 	ໝາຍເຖິງການລະບຸ ຊື່ແທັກ ພ້ອມຊື່ class
@@ -82,7 +82,7 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 	<H1> MySQL </H1>
 	<H2> MySQL </H2>
 	<H3> MySQL </H3>
-	ຈົ່ງຂຽນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ tag  H1 ເຮັດແນວໃດ?
+	**ຈົ່ງຂຽນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນໃນ tag  H1 ເຮັດແນວໃດ?**
 	==>jQuery<==
 	$(document).ready(function () {
 	        $("h1").hide();
@@ -96,7 +96,7 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 ```html
 	<h1> test </h1>
 	<button>click here</button>
-	- ຈົ່ງຂຽນ jquery ເມື່ອກົດໃສ່ປຸ່ມ ແລ້ວໄຫ້ຂໍ້ມູນຢູ່ tag h1 ຫາຍໄປ
+	**- ຈົ່ງຂຽນ jquery ເມື່ອກົດໃສ່ປຸ່ມ ແລ້ວໄຫ້ຂໍ້ມູນຢູ່ tag h1 ຫາຍໄປ**
 	==>jQuery<==
 	$(document).ready(function(){
 		$('button').click(function(){
@@ -115,7 +115,7 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 	<p> paragraph 2 </p>
 	<p> paragraph 3 </p>
 	<button> hide </button>
-	ຈົ່ງຂຽນ jquery ເມື່ອກົດປຸ່ມ ແລ້ວວ ໄຫ້ຂໍ້ມູນ tag p ຫາຍໄປ
+	**ຈົ່ງຂຽນ jquery ເມື່ອກົດປຸ່ມ ແລ້ວວ ໄຫ້ຂໍ້ມູນ tag p ຫາຍໄປ**
 	==>jQuery<==
 	$(function(){
 		$('button').click(function(){
@@ -128,4 +128,32 @@ Action ຄືຕົວທີ່ກຳນົດໃຫ້ selector ທຳງານ
 	<p> paragraph 2 </p>
 	<p> paragraph 3 </p>
 	<button> hide </button>
+```
+
+## 4, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
+```html
+		<h3 class='a'> ເຈົ້າເລືອກສີແດງ </h3>
+		<h3 class='b'> ເຈົ້າເລືອກສີຟ້າ </h3>
+		<button class='red'> ສີແດງ </button>
+		<button class='blue'> ສີຟ້າ </button>
+		**ຈົ່ງຂຽນນ jQuery ເພື່ອເຊື່ອງຂໍ້ມູນ ໃນ h3 ແລ້ວເມື່ອຄຣີກໃສ່ຄຳວ່າສີແດງໃຫ້ຂື້ນວ່າ ເຈົ້າເລືອກສີແດງຖ້າຄຣິກໃສ່ສິຟ້າໃຫ້ສະແດງຄຳວ່າ ເຈົ້າເລືອກສີຟ້າ**
+		==>jQuery<==
+		$(function(){
+		    $('h3').hide();
+		    $('button.red').click(function () { 
+		        $('.a').show();
+		        $('.b').hide();
+		        $('*').css("color","red");
+		     });
+		     $('button.blue').click(function () { 
+		        $('.b').show();
+		        $('.a').hide();
+		        $('*').css("color","blue");
+		     });
+		});
+		==>Html<==
+		<h3 class='a'> ເຈົ້າເລືອກສີແດງ </h3>
+		<h3 class='b'> ເຈົ້າເລືອກສີຟ້າ </h3>
+		<button class='red'> ສີແດງ </button>
+		<button class='blue'> ສີຟ້າ </button>
 ```
