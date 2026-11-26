@@ -6,44 +6,48 @@
     <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
     <title>Document</title>
     <script>
+      //   $(function () {
+      //     $(".btn_a").click(function () {
+      //       $(".a").toggle();
+      //     });
+      //     $(".btn_b").dblclick(function () {
+      //       $(".b").toggle();
+      //     });
+      //   });
+
     //   $(function () {
-    //     $(".btn_a").click(function () {
-    //       $(".a").toggle();
+    //     $(".b1").hide();
+    //     $(".btn1").click(function () {
+    //       if ($(".b1").is(":hidden")) {
+    //         $(".a1").fadeOut();
+    //         $(".b1").fadeIn();
+    //       } else $(".b1").fadeOut();
     //     });
-    //     $(".btn_b").dblclick(function () {
-    //       $(".b").toggle();
+    //     $(".btn2").dblclick(function () {
+    //       $(".a1,.b1").fadeIn();
     //     });
+    //     $(".btn1").hover(
+    //       function () {
+    //         $(this).css({ "background-color": "green", "font-size": "24px" });
+    //         $(".btn2").fadeTo("slow", 1);
+    //       },
+    //       function () {
+    //         $(this).css({ "background-color": "", "font-size": "" });
+    //         $(".btn2").fadeTo("slow", 1);
+    //       },
+    //     );
+    //     $(".btn2").hover(
+    //       function () {
+    //         $(this).css({ "background-color": "blue", "font-size": "24px" });
+    //         $(".btn1").fadeTo("slow", 0);
+    //       },
+    //       function () {
+    //         $(this).css({ "background-color": "", "font-size": "" });
+    //         $(".btn1").fadeTo("slow", 1);
+    //       },
+    //     );
     //   });
-$(function(){
-	    $('.b1').hide();
-	      $('.btn1').click(function(){
-	        if($('.b1').is(':hidden')){
-	          $('.a1').fadeOut();
-	          $('.b1').fadeIn();
-	        }else $('.b1').fadeOut();
-	});
-	$('.btn2').dblclick(function(){
-	  $('.a1,.b1').fadeIn();
-	});
-	  $('.btn1').hover(
-	  function(){
-	  $(this).css({"background-color": "green", "font-size": "24px"});
-	  $('.btn2').fadeTo("slow",1)
-	  },
-	  function(){
-	    $(this).css({"background-color": "", "font-size": ""});
-	    $('.btn2').fadeTo("slow",1);}
-	  );
-	  $('.btn2').hover(
-	  function(){
-	    $(this).css({"background-color": "blue", "font-size": "24px"});
-	    $('.btn1').fadeTo('slow',0);
-	  },
-	  function(){$(this).css({"background-color": "", "font-size": ""});
-	  $('.btn1').fadeTo("slow",1)
-	  }
-	);
-	});
+
 
     </script>
   </head>
@@ -53,9 +57,14 @@ $(function(){
     <button type="button" class="btn_a">click</button>
     <button type="button" class="btn_b">dblclick</button> -->
 
-     <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
-	    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
-	    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
-	    <button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button>
+    <!-- <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
+    <button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button> -->
+
+    <img src='……..' whdth='300' height='300'></img>
+	    <button type="button" class="slideup">ເລື່ອນຂື້ນ</button>
+	    <button type="button" class="slidedown">ເລື່ອນລົງ</button>
+	    <button type="button" class="slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
   </body>
 </html>
