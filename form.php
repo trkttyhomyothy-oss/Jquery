@@ -21,8 +21,15 @@
                    alert ("ກະລຸນາເລືອກປະເພດຫ້ອງ");
                 }else if(c == ""){
                    alert ("ກະລຸນາເລືອກລາຄາຫ້ອງ");
-                }else if(d == ""){
-                   alert ("ກະລຸນາເລືອກສະຖານະຫ້ອງ");
+                }
+
+                // version ເກົ່າງ
+                // else if(d == ""){
+                //    alert ("ກະລຸນາເລືອກສະຖານະຫ້ອງ");
+
+                // version ທີ່ແກ້ແລ້ວ
+                else if(!d){
+                    alert ("ຫ້ອງບໍ່ວ່າງ");
                 }else{
                 $.get("get1.php",{
                     room_number:a,
