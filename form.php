@@ -81,10 +81,20 @@
                                 <div class="form-group">
                                     <label for="price_room">ລາຄາຫ້ອງ</label>
                                     <select name="price_room" id="price_room">
+
+                                        <!-- ນີ້ແມ່ນເວີຊັ້ນເກົ່າ -->
+                                        <!-- 
                                         <option value="">ເລືອກລາຄາຫ້ອງ</option>  
                                         <option value="single">550,000</option>  
                                         <option value="double">1,500,000</option>
-                                        <option value="vip">3,000,000</option>
+                                        <option value="vip">3,000,000</option> 
+                                        -->
+
+                                        <!-- ນີ້ແມ່ນ version ໃໝ່ທີ່ແກ້ມາແລ້ວ -->
+                                        <option value="">ເລືອກລາຄາຫ້ອງ</option>  
+                                        <option value="500,000">550,000</option>  
+                                        <option value="1,500,000">1,500,000</option>
+                                        <option value="3,000,000">3,000,000</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
