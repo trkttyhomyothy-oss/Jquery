@@ -295,12 +295,23 @@ Keyup	ໝາຍເຖິງເຫດການທີ່ຈະເກີດຂື�
 	+ ເຮົາມີຂໍ້ມຸນດັ່ງນີ້:
   ```html
 	<img src='……..' whdth='300' height='300'></img>
-	    <button type="button" class="slideup">ເລື່ອນຂື້ນ</button>
-	    <button type="button" class="slidedown">ເລື່ອນລົງ</button>
-	    <button type="button" class="slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
+	    <button type="button" id="slideup">ເລື່ອນຂື້ນ</button>
+	    <button type="button" id="slidedown">ເລື່ອນລົງ</button>
+	    <button type="button" id="slidetoggle">ເລື່ອນຂື້ນ ແລະ ເລື່ອນລົງ</button>
 	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນຂື້ນ ໄຫ້ຮູບນັ້ນເລື່ອນຂື້ນ
 	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນລົງ ໄຫ້ຮູບນັ້ນເລື່ອນລົງ
 	ຖ້າຫາກວ່າ ກົດປຸ່ມເລືອນຂື້ນ ແລະ ລົງ ໄຫ້ຮູບນັ້ນເລື່ອນຂື້ນ ແລະ ເມື່ອກົດປຸ່ມອີກຄັ້ງ ໃຫ້ຮູບພາບນັ່ນເລື່ອນລົງ
+	$(function(){
+$('#slideup').click(function(){
+$('img').slideUp();
+});
+$('#slidedown').click(function(){
+$('img').slideDown();
+});
+$('#slidetoggle').click(function(){
+$('img').slideToggle();
+});
+});
 ```
 ### 3, ເຮົາມີຂໍ້ມູນດັ່ງນີ້:
 ```html
@@ -310,6 +321,14 @@ Keyup	ໝາຍເຖິງເຫດການທີ່ຈະເກີດຂື�
 	ຈົ່ງຂຽນ jQuery ດັ່ງນີ້:
 	- ເມື່ອເຮົາກົດໃສ່ປຸ່ມ fadeIn ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆສະແດງຜົນ
 	- ເມື່ອເຮົາກົດໃສ່ປຸ່ມ fadeOut ໃຫ້ຂໍ້ຄວາມຄ່ອຍໆຫາຍໄປ
+	$(function () {
+              $(".btn1").click(function () {
+                $("p").fadeIn();
+              });
+              $(".btn2").click(function () {
+                $("p").fadeOut();
+              });
+            });
  ```
 ### 4, ເຮົາມີຂໍ້ມຸນດັ່ງນີ້:
 ```html
@@ -415,7 +434,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                         <input type="radio" id="gender" name="gender" value=" ເພດຊາຍ"> ຊາຍ
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="card-footer">
                                     <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
 
                                     <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
@@ -423,13 +442,20 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                 </div>
                             </form>
                         </div>
-                        <div class="card-footer">
-                            <div id="show"></div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-4"></div>
             </div>
+			<div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h2 align="center">ຂໍ້ມູນທີ່ບັນທຶກ</h2>
+                            </div>
+                            <div class="card-body">
+                                <div id="show"></div>
+                            </div>
+                        </div>
+                        </div>
         </div>
     </div>
 </body>
@@ -537,7 +563,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
     <style>
         *{
             font-family: 'Orbitron';
-            justify-content: center
+            justify-content: center;
         }
     </style>
 </head>
@@ -545,7 +571,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5">
-                <div class="">
+                
                     <div class="card">
                         <div class="card-header text-white bg-success">
                             <h2 align="center">ຟອມບັນທຶກຂໍ້ມູນ</h2>
@@ -558,7 +584,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                 </div>
                                 <div class="form-group">
                                     <label for="category_room">ປະເພດຫ້ອງ</label>
-                                    <select name="category_room" id="category_room">
+                                    <select name="category_room" id="category_room" class="form-control">
                                         <option value="">ເລືອກປະເພດຫ້ອງ</option>  
                                         <option value="single">ຫ້ອງດຽວ</option>  
                                         <option value="double">ຫ້ອງຄູ່</option>
@@ -567,7 +593,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                 </div>
                                 <div class="form-group">
                                     <label for="price_room">ລາຄາຫ້ອງ</label>
-                                    <select name="price_room" id="price_room">
+                                    <select name="price_room" id="price_room" class="form-control">
                                         <option value="">ເລືອກລາຄາຫ້ອງ</option>  
                                         <option value="550,000">550,000</option>  
                                         <option value="1,500,000">1,500,000</option>
@@ -581,21 +607,29 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                         <input type="radio" id="status" name="status" value=" ບໍ່ວ່າງ"> ບໍ່ວ່າງ
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="card-footer">
                                     <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
 
                                     <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
 
                                 </div>
+
                             </form>
                         </div>
-                        <div class="card-footer">
-                            <div id="show"></div>
-                        </div>
+                    
                     </div>
-                </div>
                 <div class="col-md-4"></div>
             </div>
+            <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h2 align="center">ຂໍ້ມູນທີ່ບັນທຶກ</h2>
+                            </div>
+                            <div class="card-body">
+                                <div id="show"></div>
+                            </div>
+                        </div>
+                        </div>
         </div>
     </div>
 </body>
