@@ -21,7 +21,7 @@
                    alert ("ກະລຸນາເລືອກປະເພດຫ້ອງ");
                 }else if(c == ""){
                    alert ("ກະລຸນາເລືອກລາຄາຫ້ອງ");
-                }else if(d == ""){
+                }else if(!d){
                    alert ("ກະລຸນາເລືອກສະຖານະຫ້ອງ");
                 }else{
                 $.get("get1.php",{
@@ -49,7 +49,7 @@
     </script>
     <style>
         *{
-            font-family: 'noto sand lao looped';
+            font-family: 'Orbitron';
             justify-content: center
         }
     </style>
@@ -82,9 +82,9 @@
                                     <label for="price_room">ລາຄາຫ້ອງ</label>
                                     <select name="price_room" id="price_room">
                                         <option value="">ເລືອກລາຄາຫ້ອງ</option>  
-                                        <option value="single">550,000</option>  
-                                        <option value="double">1,500,000</option>
-                                        <option value="vip">3,000,000</option>
+                                        <option value="550,000">550,000</option>  
+                                        <option value="1,500,000">1,500,000</option>
+                                        <option value="3,000,000">3,000,000</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
