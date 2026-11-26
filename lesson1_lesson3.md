@@ -636,5 +636,3 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
 
 </html>
 ```
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?2C512A67944A87A9A3D72F9D03DA1592DA9C

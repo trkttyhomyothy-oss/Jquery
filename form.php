@@ -1,95 +1,96 @@
 	<!DOCTYPE html>
-<html lang="en">
+	<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
-    <title>Document</title>
-    <script >
-        $(document).ready(function () {
-            $('#sand').click(function (e) { 
-                e.preventDefault();
-                var a = $("#fname").val();
-                var b = $("#lname").val();
-                var c = $("input[id='gender']:checked").val();
-                $.get("get.php",{
-                    fname:a,
-                    lname:b,
-                    gender:c
-                },
-                function(output){
-                    $("#show").html(output);
-                }
-            );
-            });
-            $('#reset').click(function (e) { 
-                e.preventDefault();
-                $("#fname").val("");
-                $("#lname").val("");
-                $("input[id='gender']:checked").val();
-                $("#show").html("");
-            });
-        });
-    </script>
-    <style>
-        *{
-            font-family: 'noto sand lao looped';
-            justify-content: center
-        }
-    </style>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="">
-                    <div class="card">
-                        <div class="card-header text-white bg-success">
-                            <h2 align="center">ຟອມບັນທຶກຂໍ້ມູນ</h2>
-                        </div>
-                        <div class="card-body">
-                            <form action="get.php" class="vertical" method="GET">
-                                <div class="form-group">
-                                    <label for="fname">ຊື່</label>
-                                    <input type="text" name="fname" id="fname" placeholder="ປ້ອນຊື່" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">ນາມສະກຸນ</label>
-                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="ປ້ອນນາມສະກຸນ">
-                                </div>
-                                <div class="form-group">
-                                    <label for="gender">ເລືອກເພດ</label>
-                                    <div class="radio-inline">
-                                        <input type="radio" id="gender"  name="gender" value=" ເພດຍິງ"> ຍິງ
-                                        <input type="radio" id="gender" name="gender" value=" ເພດຊາຍ"> ຊາຍ
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+	    <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
+	    <title>Document</title>
+	    <script>
+	        $(document).ready(function() {
+	            $('#sand').click(function(e) {
+	                e.preventDefault();
+	                var a = $("#fname").val();
+	                var b = $("#lname").val();
+	                var c = $("input[id='gender']:checked").val();
+	                $.get("get.php", {
+	                        fname: a,
+	                        lname: b,
+	                        gender: c
+	                    },
+	                    function(output) {
+	                        $("#show").html(output);
+	                    }
+	                );
+	            });
+	            $('#reset').click(function(e) {
+	                e.preventDefault();
+	                $("#fname").val("");
+	                $("#lname").val("");
+	                $("input[id='gender']:checked").val();
+	                $("#show").html("");
+	            });
+	        });
+	    </script>
+	    <style>
+	        * {
+	            font-family: 'noto sand lao looped';
+	            justify-content: center
+	        }
+	    </style>
+	</head>
 
-                                    <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
+	<body>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-md-5">
+	                <div class="">
+	                    <div class="card">
+	                        <div class="card-header text-white bg-success">
+	                            <h2 align="center">ຟອມບັນທຶກຂໍ້ມູນ</h2>
+	                        </div>
+	                        <div class="card-body">
+	                            <form action="get.php" class="vertical" method="GET">
+	                                <div class="form-group">
+	                                    <label for="fname">ຊື່</label>
+	                                    <input type="text" name="fname" id="fname" placeholder="ປ້ອນຊື່" class="form-control">
+	                                </div>
+	                                <div class="form-group">
+	                                    <label for="">ນາມສະກຸນ</label>
+	                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="ປ້ອນນາມສະກຸນ">
+	                                </div>
+	                                <div class="form-group">
+	                                    <label for="gender">ເລືອກເພດ</label>
+	                                    <div class="radio-inline">
+	                                        <input type="radio" id="gender" name="gender" value=" ເພດຍິງ"> ຍິງ
+	                                        <input type="radio" id="gender" name="gender" value=" ເພດຊາຍ"> ຊາຍ
+	                                    </div>
+	                                </div>
+	                                <div class="card-footer">
+	                                    <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
 
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-			<div class="col-md-5">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h2 align="center">ຂໍ້ມູນທີ່ບັນທຶກ</h2>
-                            </div>
-                            <div class="card-body">
-                                <div id="show"></div>
-                            </div>
-                        </div>
-                        </div>
-        </div>
-    </div>
-</body>
+	                                    <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
 
-</html>
+	                                </div>
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-4"></div>
+	            </div>
+	            <div class="col-md-5">
+	                <div class="card">
+	                    <div class="card-header bg-success text-white">
+	                        <h2 align="center">ຂໍ້ມູນທີ່ບັນທຶກ</h2>
+	                    </div>
+	                    <div class="card-body">
+	                        <div id="show"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+
+	</html>
