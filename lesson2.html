@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-4.1.0.js"></script>
+    <title>Document</title>
+    <script>
+    //   $(function () {
+    //     $(".btn_a").click(function () {
+    //       $(".a").toggle();
+    //     });
+    //     $(".btn_b").dblclick(function () {
+    //       $(".b").toggle();
+    //     });
+    //   });
+$(function(){
+	    $('.b1').hide();
+	      $('.btn1').click(function(){
+	        if($('.b1').is(':hidden')){
+	          $('.a1').fadeOut();
+	          $('.b1').fadeIn();
+	        }else $('.b1').fadeOut();
+	});
+	$('.btn2').dblclick(function(){
+	  $('.a1,.b1').fadeIn();
+	});
+	  $('.btn1').hover(
+	  function(){
+	  $(this).css({"background-color": "green", "font-size": "24px"});
+	  $('.btn2').fadeTo("slow",1)
+	  },
+	  function(){
+	    $(this).css({"background-color": "", "font-size": ""});
+	    $('.btn2').fadeTo("slow",1);}
+	  );
+	  $('.btn2').hover(
+	  function(){
+	    $(this).css({"background-color": "blue", "font-size": "24px"});
+	    $('.btn1').fadeTo('slow',0);
+	  },
+	  function(){$(this).css({"background-color": "", "font-size": ""});
+	  $('.btn1').fadeTo("slow",1)
+	  }
+	);
+	});
+
+    </script>
+  </head>
+  <body>
+    <!-- <p class="a">ຄຣິກຄັ້ງດຽວ</p>
+    <p class="b">ຄຣິກສອງຄັ້ງ</p>
+    <button type="button" class="btn_a">click</button>
+    <button type="button" class="btn_b">dblclick</button> -->
+
+     <h3 class="a1">ຄ່ອຍໆຫາຍໄປ</h3>
+	    <h3 class="b1">ຄ່ອຍໆສະແດງອອກມາ</h3>
+	    <button type="button" class="btn1">ຄຣິກຄັ້ງດຽວ</button>
+	    <button type="button" class="btn2">ຄຣິກສອງຄັ້ງ</button>
+  </body>
+</html>
