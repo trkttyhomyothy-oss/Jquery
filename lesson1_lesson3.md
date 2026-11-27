@@ -528,14 +528,37 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                 var b = $("#category_room").val();
                 var c = $("#price_room").val();
                 var d = $("input[id='status']:checked").val();
-                if(a == ""){
-                   alert("ກະລຸນາໃສ່ເບີຫ້ອງ");
-                }else if(b == ""){
-                   alert ("ກະລຸນາເລືອກປະເພດຫ້ອງ");
-                }else if(c == ""){
-                   alert ("ກະລຸນາເລືອກລາຄາຫ້ອງ");
+                if(!a){
+                   Swal.fire({
+                    icon:'error',
+                    position: "top-end",
+                    title:'ແຈ້ງເຕືອນ',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    text:'ກະລຸນາປ້ອນເບີຫ້ອງ',
+                    width:300,
+                   });
+                   
+
+                }else if(!b ){
+                    Swal.fire({
+                    icon:'warning',
+                    title:'ແຈ້ງເຕືອນ',
+                    text:'ກະລຸນາປ້ອນປະເພດຫ້ອງ'
+                   });
+                }
+                else if(!c ){
+                    Swal.fire({
+                    icon:'warning',
+                    title:'ແຈ້ງເຕືອນ',
+                    text:'ກະລຸນາປ້ອນລາຄາຫ້ອງ'
+                   });
                 }else if(!d){
-                   alert ("ກະລຸນາເລືອກສະຖານະຫ້ອງ");
+                    Swal.fire({
+                    icon:'warning',
+                    title:'ແຈ້ງເຕືອນ',
+                    text:'ກະລຸນາປ້ອນສະຖານະຫ້ອງ'
+                   });
                 }else{
                 $.get("get1.php",{
                     room_number:a,
@@ -636,3 +659,15 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
 
 </html>
 ```
+```java
+<?php
+$room_number = htmlspecialchars($_GET['room_number']);
+$category_room = htmlspecialchars($_GET['category_room']);
+$price_room = htmlspecialchars($_GET['price_room']);
+$status = htmlspecialchars($_GET['status']);
+echo "ເບີຫ້ອງ: $room_number <br>";
+echo "ປະເພດຫ້ອງ: $category_room <br>";
+echo "ລາຄາຫ້ອງ: ".number_format($price_room) . " ກີບ <br>";
+echo "ສະຖານະຫ້ອງ: $status <br>";
+
+?>

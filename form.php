@@ -18,10 +18,16 @@
                 var d = $("input[id='status']:checked").val();
                 if(!a){
                    Swal.fire({
-                    icon:'warning',
+                    icon:'error',
+                    position: "top-end",
                     title:'ແຈ້ງເຕືອນ',
-                    text:'ກະລຸນາປ້ອນເບີຫ້ອງ'
+                    showConfirmButton: false,
+                    timer: 1500,
+                    text:'ກະລຸນາປ້ອນເບີຫ້ອງ',
+                    width:300,
                    });
+                   
+
                 }else if(!b ){
                     Swal.fire({
                     icon:'warning',
@@ -100,9 +106,9 @@
                                     <label for="price_room">ລາຄາຫ້ອງ</label>
                                     <select name="price_room" id="price_room" class="form-control">
                                         <option value="">ເລືອກລາຄາຫ້ອງ</option>  
-                                        <option value="550,000">550,000</option>  
-                                        <option value="1,500,000">1,500,000</option>
-                                        <option value="3,000,000">3,000,000</option>
+                                        <option value="550000">550000</option>  
+                                        <option value="1500000">1500000</option>
+                                        <option value="3000000">3000000</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
