@@ -610,7 +610,7 @@ $(" ເລືອກ ID or Class ຂອງປຸ່ມ").click(function(){
                                 <div class="card-footer">
                                     <button type="button" class="btn btn-success" id="sand"> ບັນທຶກຂໍ້ມູນ</button>
 
-                                    <button type="button" class="btn btn-danger" id="reset"> ລ້າງຂໍ້ມູນ</button>
+									<button type="button" class="btnbtn-danger" id="reset"> ລ້າງຂໍ້ມູນ<button>
 
                                 </div>
 
